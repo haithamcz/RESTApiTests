@@ -12,8 +12,8 @@ There are 4 main scenarios, the first 3 are based on the test scope and last one
 kindly, let me know if you have any questions @Haitham Jassim
 
 #Remarks
--- the code has been added to src java dir, because in future there will be a need to write unit test for the my test code then this will
-be become handy
+-- the code has been added to src java dir, because in future there will be a need to write unit test for the my test code then this will be become handy
+-- java docs have been used to document classes/methods
 -- also, there a gradle build script ready, however due to time bandwidth the script will only build the packages by gradle build command. the gradle
 cucumber test runner (gradle cucumber) is implemented but that is not 100% yet
 -- for logging I used System.out.println, this could be refactored to use log4j
