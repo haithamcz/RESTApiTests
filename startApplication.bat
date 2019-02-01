@@ -1,0 +1,1 @@
+"%JAVA_HOME%/bin/java" -jar ./lib/trade-validation-service-1.0.0-SNAPSHOT.jar

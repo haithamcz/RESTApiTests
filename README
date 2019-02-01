@@ -1,0 +1,21 @@
+to run the test:-
+- install Maven
+- start the validation service, by running startApplication script
+- run test run-tests script, which will trigger maven clean install then execute cucumber scenarios
+- the final HTML(also other formats are available) test report will be saved in the target directory/output
+
+There are 4 main scenarios, the first 3 are based on the test scope and last one is regression for batch validation REST endpoint.
+    All tests should pass apart from validating legal entity should be  CS Zurich and American options type check for Exercise Start Date, seems the the service
+    validation is not working, I would raise a jira for that :)
+
+
+kindly, let me know if you have any questions @Haitham Jassim
+
+#Remarks
+-- the code has been added to src java dir, because in future there will be a need to write unit test for the my test code then this will
+be become handy
+-- also, there a gradle build script ready, however due to time bandwidth the script will only build the packages by gradle build command. the gradle
+cucumber test runner (gradle cucumber) is implemented but that is not 100% yet.
+-- references for test data used
+   --- https://en.wikipedia.org/wiki/Option_(finance)#Option_styles
+   --- https://en.wikipedia.org/wiki/ISO_4217#X_currencies

@@ -1,0 +1,58 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'org.haitham'
+version = '1.0-SNAPSHOT'
+
+description = """"""
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version:'2.9.7'
+    compile group: 'junit', name: 'junit', version:'4.12'
+    compile group: 'com.google.code.gson', name: 'gson', version:'2.8.0'
+    compile group: 'commons-io', name: 'commons-io', version:'2.5'
+    compile group: 'commons-codec', name: 'commons-codec', version:'1.10'
+    compile group: 'io.swagger', name: 'swagger-annotations', version:'1.5.8'
+    compile group: 'com.squareup.okio', name: 'okio', version:'1.4.0'
+    compile group: 'joda-time', name: 'joda-time', version:'2.7'
+    compile group: 'com.squareup.okhttp', name: 'logging-interceptor', version:'2.7.5'
+    compile group: 'com.squareup.okhttp', name: 'okhttp', version:'2.7.5'
+    compile group: 'info.cukes', name: 'cucumber-junit', version:'1.2.4'
+    compile group: 'info.cukes', name: 'cucumber-java8', version:'1.2.4'
+    compile group: 'info.cukes', name: 'cucumber-picocontainer', version:'1.2.4'
+    compile group: 'com.vimalselvam', name: 'cucumber-extentsreport', version:'3.0.1'
+    compile group: 'com.vaadin.external.google', name: 'android-json', version:'0.0.20131108.vaadin1'
+    compile group: 'com.aventstack', name: 'extentreports', version:'3.0.6'
+    testCompile 'io.cucumber:cucumber-java:4.2.0'
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testRuntime
+    }
+}
+
+task cucumber() {
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "cucumber.api.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty', '--glue', 'org.haitham.demoswagger', '/Users/hajty/repos/creditSwiss/POC/demoSwagger/src/main/resources/features']
+        }
+    }
+}
+
+
