@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ *
+ * this class set main properties for the rest service like host/URL
+ * also handler for cucumber plugin and reports
+ *
+ */
 public class Common {
 
     private static final String REST_SERVICE_HOST = System.getProperty(

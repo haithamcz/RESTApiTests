@@ -4,6 +4,7 @@ import java.io.IOException;
 
 /**
  * @author Haitham Jassim
+ * Json file loader
  */
 class ResourceFileManager {
     /**

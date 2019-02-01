@@ -9,7 +9,7 @@ import org.junit.Assert;
 /**
  *
  *  @author Haitham Jassim
- *
+ *  Step definition class
  */
 public class StepDefinition {
 
