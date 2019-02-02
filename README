@@ -1,5 +1,4 @@
 to run the test:-
-# seleniumJava
 - install Maven
 - start the validation service, by running startApplication script
 - run test run-tests script, which will trigger maven clean install then execute cucumber scenarios
