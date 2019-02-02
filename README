@@ -1,5 +1,5 @@
 to run the test:-
-- install Maven
+# install Maven
 - start the validation service, by running startApplication script
 - run test run-tests script, which will trigger maven clean install then execute cucumber scenarios
 - the final HTML(also other formats are available) test report will be saved in the target directory/output which also support junit
