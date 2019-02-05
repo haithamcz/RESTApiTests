@@ -6,8 +6,7 @@ to run the test:-
 - the tests could be run form IntelliJ as TestNG or Junit on the feature file (right click  on the scenario or feature)
 
 There are 4 main scenarios, the first 3 are based on the test scope and last one is regression for batch validation REST endpoint.
-    All tests should pass apart from validating legal entity should be  CS Zurich and American options type check for Exercise Start Date, seems the the service
-    validation is not working, I would raise a jira for that :)
+    All tests should pass apart from validating legal entity should be  CS Zurich and American options type check for Exercise Start Date.
 
 
 kindly, let me know if you have any questions @Haitham Jassim
